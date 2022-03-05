@@ -91,7 +91,7 @@ function Initialize {
 
 
 Initialize
-$config = ConvertFrom-Json (Get-Content -Path $configPath -Raw)
+$config = ConvertFrom-Json (Get-Content -Path $configPath -Encoding utf8 -Raw)
 $path = $config.input_path
 if(([bool]$path) -eq $false) {
     exit 1
